@@ -15,7 +15,11 @@ public class ApiController {
     public ApiController(RapidApiService rapidApiService) {
         this.rapidApiService = rapidApiService;
     }
-
+    @GetMapping("/welcome")
+    public String get()
+    {
+        return "Welcome";
+    }
     // Rest of your controller code here
     @GetMapping("/{query}")
     public String getAlluArjunImages(@PathVariable String query) {
